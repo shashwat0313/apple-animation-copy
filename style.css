@@ -1,0 +1,18 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+/* #root{
+    position: absolute;
+} */
+
+
+
+.bar{
+    width: 10px;
+    height: 250px;
+    background-color: darkblue;
+    margin: 3px;
+    display: inline-block;
+    bottom: 0;
+}
