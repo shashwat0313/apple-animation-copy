@@ -7,6 +7,11 @@ let basecolor = 'red'
 isRunning = false;
 let status_message = 'Not Running'
 
+let beginIndex = 0, minimumHeight = 200, minIdx = 0, temp, i = 0, j = 0;
+
+function resetVars() {
+    beginIndex = 0, minimumHeight = 200, minIdx = 0, temp, i = 0, j = 0;
+}
 
 $('#root').height(N * 10 + 30)
 $('body').css('background-color', 'black')
@@ -28,11 +33,6 @@ $(document).ready(function () {
     shuffle()
 });
 
-let beginIndex = 0, minimumHeight = 200, minIdx = 0, temp, i = 0, j = 0;
-
-function resetVars() {
-    beginIndex = 0, minimumHeight = 200, minIdx = 0, temp, i = 0, j = 0;
-}
 
 function animator() {
     let startIndex = beginIndex - 2, endIndex = beginIndex + 6;
@@ -81,7 +81,6 @@ function mysortInterval() {
             animator()
         }, 100);//350 remaining
     }, 400);
-
 }
 
 $('#start').click(() => {
