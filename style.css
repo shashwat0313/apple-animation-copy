@@ -11,8 +11,8 @@
 .bar{
     width: 10px;
     height: 250px;
-    background-color: darkblue;
-    margin: 3px;
+    /* background-color: darkblue; */
+    margin: 2px;
     display: inline-block;
     bottom: 0;
 }
