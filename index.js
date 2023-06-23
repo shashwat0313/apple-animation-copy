@@ -28,8 +28,11 @@ $(document).ready(function () {
     shuffle()
 });
 
-
 let beginIndex = 0, minimumHeight = 200, minIdx = 0, temp, i = 0, j = 0;
+
+function resetVars() {
+    beginIndex = 0, minimumHeight = 200, minIdx = 0, temp, i = 0, j = 0;
+}
 
 function animator() {
     let startIndex = beginIndex - 2, endIndex = beginIndex + 6;
@@ -68,7 +71,12 @@ function mysortInterval() {
             beginIndex++;
             i++;
         }
-        else { status_message = "Not Running"; document.getElementById('status').innerHTML = status_message; clearInterval(sortInterval); }
+        else {
+            resetVars();
+            status_message = "Not Running";
+            document.getElementById('status').innerHTML = status_message;
+            clearInterval(sortInterval);
+        }
         setTimeout(() => {
             animator()
         }, 100);//350 remaining
@@ -91,6 +99,7 @@ $("#reset").click(() => {
     shuffle()
     status_message = 'Not running'
     document.getElementById('status').innerHTML = status_message;
+    resetVars()
 });
 
 // function mySort() {
